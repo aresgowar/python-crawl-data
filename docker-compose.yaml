@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  crawler:
+    container_name: crawlpython
+    build: .
+    restart: always
+    # ports:
+    #   - "8000:8080"
+    # depends_on:
+    #   - db
+    # networks:
+    #   - nett
