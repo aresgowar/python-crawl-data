@@ -3,11 +3,11 @@
 
 pip install scrapy
 
-scrapy startproject crawldata
+scrapy startproject crawler
 
 scrapy shell https://stackoverflow.com/questions/tagged/python
 
-scrapy crawl posts -o posts.json
+scrapy crawl crawler -o comments.json
 
 pip install scrapy-xlsx
 
