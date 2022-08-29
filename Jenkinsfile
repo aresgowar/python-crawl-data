@@ -1,30 +1,16 @@
-// pipeline {
-//     agent any
-//     stages {
-//         stage('Clone') {
-//             steps {
-//                 git 'https://github.com/aresgowar/python-crawl-data.git'
-//             }
-//         }
-//     }
-// }
-
 pipeline {
-    agent {
-        docker {
-            image "python:3.8-alpine"
-        }
-    }
-
+    agent any
     stages {
-        stage('Build') { 
+        stage('Clone') {
             steps {
-                sh """
-                    python --version
-                    pip3 install -r requirements.txt
-                    python crawl.py
-                """
+                git 'https://github.com/aresgowar/python-crawl-data.git'
             }
         }
+        // stage('Docker') {
+        //     steps {
+        //         withDockerRegistry(credentialsId: 'docker-hub', url: ' https://index.docker.io/v1/') {
+        //         }
+        //     }
+        // }
     }
 }
