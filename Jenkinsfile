@@ -1,14 +1,9 @@
 pipeline {
-    agent any
-    // {
-    //     docker { image 'aresgowar/aresdockercrawl:1.0' }
-    // }
+    agent { docker { image 'python:3.10.1-alpine' } }
     stages {
-        stage('Test') {
+        stage('build') {
             steps {
-                sh """
-                    py crawl.py
-                """
+                sh 'python --version'
             }
         }
     }
