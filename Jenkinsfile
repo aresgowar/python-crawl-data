@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/aresgowar/python-crawl-data.git'
+                git clone 'https://github.com/aresgowar/python-crawl-data.git'
             }
         }
     }
