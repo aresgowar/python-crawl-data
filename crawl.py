@@ -18,12 +18,12 @@ def spider_results():
     process.crawl(CrawlerSpider)
     process.start()
     
-    with open('questions.csv', 'w') as csvfile:
-        fieldnames = ['id', 'title', 'content', 'vote', 'answer', 'view']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    # with open('questions.csv', 'w') as csvfile:
+    #     fieldnames = ['id', 'title', 'content', 'vote', 'answer', 'view']
+    #     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-        writer.writeheader()
-        for i in results:
-            writer.writerow({'id': i['id'], 'title': i['title'], 'content': i['content'], 'vote': i['vote'], 'answer': i['answer'], 'view': i['view'],})
+    #     writer.writeheader()
+    #     for i in results:
+    #         writer.writerow({'id': i['id'], 'title': i['title'], 'content': i['content'], 'vote': i['vote'], 'answer': i['answer'], 'view': i['view'],})
 
 spider_results()

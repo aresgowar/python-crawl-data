@@ -15,7 +15,7 @@ scrapy crawl posts -o posts.xlsx
 
 
 
-docker build -t mycrawler .
+docker build -t aresgowar/aresdockercrawl:1.0 .
 
 docker compose up
 
