@@ -7,7 +7,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh """
-                    python --version
+                    docker compose up
                 """
             }
         }
