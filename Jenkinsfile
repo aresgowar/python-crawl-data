@@ -7,7 +7,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh """
-                    docker compose up
+                    py crawl.py
                 """
             }
         }
