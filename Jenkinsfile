@@ -1,7 +1,8 @@
 pipeline {
-    agent {
-        docker { image 'aresgowar/aresdockercrawl:1.0' }
-    }
+    agent any
+    // {
+    //     docker { image 'aresgowar/aresdockercrawl:1.0' }
+    // }
     stages {
         stage('Test') {
             steps {
