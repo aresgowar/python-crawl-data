@@ -16,7 +16,7 @@ pipeline {
                 }
             }
         }
-        stage('Build') {
+        stage('Builded') {
             steps {
                 sh """
                     python --version
